@@ -2,7 +2,7 @@
   "name": "douzone-steamcare-math",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "douzone-steamcare-math.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

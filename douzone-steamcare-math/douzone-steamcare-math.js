@@ -1,4 +1,4 @@
-moduel.exports = {
+module.exports = {
     sum: function(){
         var sum = 0;
         Array.from(arguments).forEach(function(e) { // 유사 배열을 배열로
@@ -9,7 +9,7 @@ moduel.exports = {
     },
     max: function() {
         var max = Number.MIN_SAFE_INTEGER;
-        Array.from.forEach(function(e){
+        Array.from(arguments).forEach(function(e){
             max = e > max ? e : max;
         });
 
