@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "start": "node index.js",
+    "debug": "nodaemon index.js"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -14,7 +15,6 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "nodaemon": "^0.0.5",
-    "nodemon": "^2.0.15"
+    "nodaemon": "^0.0.5"
   }
 }

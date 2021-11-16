@@ -52,20 +52,25 @@
     4) app04: based on connect, serve-static, connect-route: npm package
 
 8. helloweb-ex02: express 프레임워크 기반의 웹애플리케이션 만들기<br>
-    [helloweb-ex02] `$ npm init -y`<br>
+    1) 
+    [helloweb-ex02] `$ npm init -y`<br><br>
+    2)
     [helloweb-ex02] `$ npm i express`<br>
     [helloweb-ex02] `$ npm i ejs`<br>
-    [helloweb-ex02] `$ npm i -D nodemon`<br>
-
-    package.json 스크립트
+    [helloweb-ex02] `$ npm i -D nodemon`<br><br>
+    3) package.json 스크립트
     ```
     "scripts": {
         "start": "node index.js",
         "debug": "nodemon index.js"
     },
     ```
-
-    1.
     [helloweb-ex02] `$ npm start`       (운용시)<br>
-    [helloweb-ex02] `$ npm run debug`   (개발시)<br>
+    [helloweb-ex02] `$ npm run debug`   (개발시)<br><br>
+    4) 디렉토리 구조    
+    [helloweb-ex02] `$ mkdir public`<br>
+    [helloweb-ex02] `$ mkdir routes`<br>
+    [helloweb-ex02] `$ mkdir controllers`<br>
+    [helloweb-ex02] `$ mkdir models`<br>
+    [helloweb-ex02] `$ mkdir views`<br>
     
