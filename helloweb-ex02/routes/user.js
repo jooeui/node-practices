@@ -24,4 +24,19 @@ router.route("/join").post(function(req, res){
     res.redirect('/');
 });
 
+router.route("/api").get(function(req, res){
+    const vo = {
+        no: 10,
+        name: '피카츄',
+        email: 'pikachu@gmail.com',
+        gender: 'male'
+    };
+
+    // res.writeHead(200, {
+    //     'Content-Type': 'application/json'
+    // });
+    // res.end(JSON.stringify(vo));
+    res.send(vo);
+})
+
 module.exports = router;
