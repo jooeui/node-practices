@@ -46,12 +46,26 @@
         `[douzone-bipa-math] $ npm publish`<br>
 
 7. helloweb-ex01: 맨바닥에서 웹애플리케이션 만들어보기
-    > 1) app01: based on http : core module
-    > 2) app02: based on http, fs: core module
-    > 3) app03: based on connect, serve-static: npm package
-    > 4) app04: based on connect, serve-static, connect-route: npm package
+    1) app01: based on http : core module
+    2) app02: based on http, fs: core module
+    3) app03: based on connect, serve-static: npm package
+    4) app04: based on connect, serve-static, connect-route: npm package
 
 8. helloweb-ex02: express 프레임워크 기반의 웹애플리케이션 만들기<br>
+    [helloweb-ex02] `$ npm init -y`<br>
     [helloweb-ex02] `$ npm i express`<br>
     [helloweb-ex02] `$ npm i ejs`<br>
-    [helloweb-ex02] `$ npm i -D nodaemon`<br>
+    [helloweb-ex02] `$ npm i -D nodemon`<br>
+
+    package.json 스크립트
+    ```
+    "scripts": {
+        "start": "node index.js",
+        "debug": "nodemon index.js"
+    },
+    ```
+
+    1.
+    [helloweb-ex02] `$ npm start`       (운용시)<br>
+    [helloweb-ex02] `$ npm run debug`   (개발시)<br>
+    
