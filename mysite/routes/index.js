@@ -1,5 +1,4 @@
-const errorRoute = require('./error'); 
-const { use } = require('./main');
+// const errorRoute = require('./error'); 
 
 const applicationRouter = {
     setup: function(application) {
@@ -21,8 +20,8 @@ const applicationRouter = {
         // .use(function(error, req, res, next) {  
         // })
 
-        .use(errorRoute.error404)
-        .use(errorRoute.error500)
+        // .use(errorRoute.error404)
+        // .use(errorRoute.error500)
 
         .siteTitle = 'MySite';  // 이게 진짜 전역..!!!!
     }
