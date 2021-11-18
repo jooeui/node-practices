@@ -17,7 +17,7 @@ module.exports = {
         logger.error(error.stack);
         
         if(req.accepts('html')){
-            res.status(500).send(`<pre>${err.stack}</pre>}`);
+            res.status(500).send(`<pre>${error.stack}</pre>}`);
         }
         
         res.status(500).send({

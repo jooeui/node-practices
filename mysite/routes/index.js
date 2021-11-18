@@ -13,7 +13,8 @@ const applicationRouter = {
             })
 
         .use('/', require('./main'))
-        .use('/user',  require('./user'))
+        .use('/user', require('./user'))
+        .use('/guestbook', require('./guestbook'))
 
         // .use(function(req, res) {
         // })
