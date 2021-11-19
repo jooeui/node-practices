@@ -104,7 +104,7 @@
 					var password = $("#password-delete").val();
 					
 					$.ajax({
-						url: "/guestbook/api/delete/" + no,
+						url: "/api/guestbook/" + no,
 						async: true,
 						type: "delete",
 						dataType: "json",
@@ -167,15 +167,15 @@
 			
 			// 글
 			vo.message = $("#tx-content").val();
-			if(vo.message = '') {
+			if(vo.message == '') {
 				messageBox("새글 작성", "내용은 반드시 입력해야 합니다.", function(){
-					$("#input-name").focus();
+					$("#tx-content").focus();
 				});
 				return;
 			}
 			
 			$.ajax({
-				url: "/guestbook/api/add",
+				url: "/api/guestbook",
 				async: true,
 				type: "post",
 				dataType: "json",
