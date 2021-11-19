@@ -7,4 +7,6 @@ router.route('/delete/:no').get(controller.delete);
 router.route('/delete').post(controller._delete);
 router.route('/insert').post(controller._insert);
 
+router.route('/spa').get(controller.spalanding);
+
 module.exports = router;

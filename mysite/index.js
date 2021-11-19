@@ -3,6 +3,7 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const dotenv = require('dotenv');
+const multer = require('multer');
 
 
 // 1. Environment Variables
@@ -24,13 +25,16 @@ const application = express()
     }))
 
     // 4-2. static resources
-    .use(express.static(path.join(__dirname, process.env.STATIC_RESOURCES_DIRECTORY)))
-    
-    // 4-3. Multipart
-
-    // 4-4. request body parser
     .use(express.urlencoded({extended: true}))  // application/x-www-form-urlencoded
     .use(express.json())                        // application/json
+    
+    // 4-3. Multipart
+    .use(multer({
+        dest: path.join(__dirname, process.env.MULTER_TEMPORARY_STORE)
+    }).single('file'))
+    
+    // 4-4. request body parser
+    .use(express.static(path.join(__dirname, process.env.STATIC_RESOURCES_DIRECTORY)))
 
     // 4-5. view engine setup
     .set('views', path.join(__dirname, 'views'))
