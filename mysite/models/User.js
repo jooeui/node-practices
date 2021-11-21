@@ -45,7 +45,7 @@ module.exports = function(sequelize) {
         freezeTableName: true,
         timestamps: false,
         createdAt: false,
-        updatedAt: false,        // 처음에는 createAt을 true로 하지만 이후에는 false... 데이터 다 날라감 ..!!!!
+        updatedAt: false,
         tableName: 'user'
     })
        

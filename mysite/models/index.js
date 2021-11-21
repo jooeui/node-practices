@@ -10,16 +10,16 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
 const User = require('./User')(sequelize);
 const Guestbook = require('./Guestbook')(sequelize);
 const Gallery = require('./Gallery')(sequelize);
-// const Board = require('./Board')(sequelize);
+const Board = require('./Board')(sequelize);
 
-// User.hasMay(Board, {
-//     foreignKey: {
-//         name: 'userNo',
-//         allowNull: false,
-//         constraints: true,
-//         onDelete: 'CASECADE'
-//     }
-// });
+User.hasMany(Board, {
+    foreignKey: {
+        name: 'userNo',
+        allowNull: false,
+        constraints: true,
+        onDelete: 'CASECADE'
+    }
+});
 
 // DB에 반영(DDL)
 User.sync({
@@ -37,6 +37,11 @@ Gallery.sync({
     alter: process.env.TABLE_ALTER_ALWAYS === 'true'
 });
 
+Board.sync({
+    force: process.env.TABLE_CREATE_ALWAYS === 'true',
+    alter: process.env.TABLE_ALTER_ALWAYS === 'true'
+});
+
 
 // Export Mapping Object
-module.exports = {User, Guestbook, Gallery};
+module.exports = {User, Guestbook, Gallery, Board};
