@@ -32,6 +32,11 @@ Guestbook.sync({
     alter: process.env.TABLE_ALTER_ALWAYS === 'true'
 });
 
+Gallery.sync({
+    force: process.env.TABLE_CREATE_ALWAYS === 'true',
+    alter: process.env.TABLE_ALTER_ALWAYS === 'true'
+});
+
 
 // Export Mapping Object
 module.exports = {User, Guestbook, Gallery};
